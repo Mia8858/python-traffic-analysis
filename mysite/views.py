@@ -6,11 +6,8 @@ from mysite.models import Post
 
 def index(request):
 	posts = Post.objects.all()
-	myname = "何敏煌"
-	data = [i for i in range(1, 43)]
-	random.shuffle(data)
-	lotto_numbers = data[0:6]
-	special_number = data[6]
+	myname = "高雄市交通資料庫"
+	
 	return render(request, 'index.html', locals())
 
 def show(request, id):
