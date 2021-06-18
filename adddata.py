@@ -5,10 +5,16 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'datacenter.settings')
 django.setup()
 from mysite.models import Post
 
-with open("traffic.csv", newline="\n", encoding="utf-8") as csvfile:
+with open("K_traffic.csv", newline="\n", encoding="utf-8") as csvfile:
 	rows = csv.reader(csvfile, delimiter=",")
 	for row in rows:
-		print(row[0], row[2])
-		newdata = Post(title=str(row[0]), body=str(row[2]))
+#		print(row[0], row[1], row[2], row[3])
+		newdata = Post(
+			K_time=str(row[0]),
+			K_location=str(row[1]),
+			K_death=str(row[2]),
+			K_injure=str(row[3])
+			)
+
 		newdata.save()
 	

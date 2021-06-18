@@ -16,12 +16,13 @@ class Migration(migrations.Migration):
             name='Post',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=200)),
-                ('body', models.TextField()),
-                ('pub_date', models.DateTimeField(default=django.utils.timezone.now)),
+                ('K_time', models.CharField(max_length=200)),
+                ('K_location', models.CharField(max_length=200)),
+                ('K_death', models.CharField(max_length=200)),
+                ('K_injure', models.CharField(max_length=200)),
             ],
-            options={
-                'ordering': ('-pub_date',),
-            },
+#            options={
+#                'ordering': ('-pub_date',),
+#            },
         ),
     ]
