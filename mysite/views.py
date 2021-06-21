@@ -13,12 +13,6 @@ def index(request, name=""):
 	
 	posts = Post.objects.all()
 
-	p = Paginator(posts, 20)
-
-	page_num = request.GET.get('page', 1)
-
-	page = p.page(page_num)
-
 	myname = "高雄市交通資料庫"
 
 	if request.method == 'POST':
@@ -27,6 +21,7 @@ def index(request, name=""):
 
 		target = Post.objects.filter(K_location__contains=district)
 
+	
 	return render(request, 'index.html', locals())	
 
 
@@ -36,3 +31,14 @@ def show(request, id):
 	except:
 		return redirect("/")
 	return render(request, "showpost.html", locals())
+
+def listing(request):
+	target = Post.objects.all()
+
+	p = Paginator(target, 20)
+	page_num = request.GET.get('page', 1)
+	page = p.page(page_num)
+
+	context = {'target' : page}
+
+	return render(request, 'list.html', context)	
