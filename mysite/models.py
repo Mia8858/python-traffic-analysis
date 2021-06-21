@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+
 class Post(models.Model):
     K_time = models.CharField(max_length=200)
     K_location = models.CharField(max_length=200)
@@ -10,3 +11,4 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
