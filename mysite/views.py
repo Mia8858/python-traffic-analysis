@@ -33,3 +33,4 @@ def show(request, id):
 	except:
 		return redirect("/")
 	return render(request, "showpost.html", locals())
+
