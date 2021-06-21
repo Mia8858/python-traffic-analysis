@@ -9,9 +9,9 @@ def index(request, name=""):
 	myname = "高雄市交通資料庫"
 	if request.method == 'POST':
 		#這是從表單來的請求
-#		items = int(request.POST["items"])
+		district = request.POST["items"]
+		K_location = request.POST["items"]
 
-		district = request.POST["district"]
 		target = Post.objects.filter(K_location__contains=district)
 
 #		if target != None:
