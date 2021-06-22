@@ -10,4 +10,9 @@ class Post(models.Model):
 #        ordering = ('-pub_date',)
 
     def __str__(self):
+<<<<<<< HEAD
+        return str(self.id)
+
+=======
         return self.title
+>>>>>>> d4ac108282bfc62c2ac84ff0bd578a94774505f1
