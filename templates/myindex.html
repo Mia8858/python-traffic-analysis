@@ -12,6 +12,16 @@
     <li><a class="dropdown-item" href="/myindex/{{i_city}}/">{{i_city}}</a></li>
   {% endfor %}
   </ul>
+  </ul>
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    選取區域圖表 {{ city }}
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+  {% for i_city in citys %}
+    <li><a class="dropdown-item" href="/chart/">{{i_city}}</a></li>
+  {% endfor %}
+  </ul>
+
 </div>
 <br>
 <div class="pagination">
