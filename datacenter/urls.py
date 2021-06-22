@@ -18,7 +18,11 @@ from django.urls import path
 from mysite.views import index, show, myindex
 
 urlpatterns = [
+<<<<<<< HEAD
 	path('show/<int:id>/', show),
+=======
+    path('show/<int:id>/', show),
+>>>>>>> d4ac108282bfc62c2ac84ff0bd578a94774505f1
     path('index/', index),
     path('myindex/', myindex),
     path('myindex/<str:city>/', myindex),
