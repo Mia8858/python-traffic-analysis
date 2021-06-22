@@ -2,7 +2,7 @@ from django.shortcuts import redirect
 from django.shortcuts import render
 from django.http import HttpResponse
 import random
-from mysite.models import Post
+from mysite.models import Post, Target
 import os
 
 
@@ -13,11 +13,11 @@ from django.shortcuts import render
 
 def index(request, name=""):
 	
-<<<<<<< HEAD
+#<<<<<<< HEAD
 	posts = Post.objects.all()
 
-=======
->>>>>>> 2c6c20248e88aecd53c4077053a7463be25bec85
+#=======
+#>>>>>>> 2c6c20248e88aecd53c4077053a7463be25bec85
 	myname = "高雄市交通資料庫"
 
 	target = Post.objects.order_by("-K_time")
@@ -39,7 +39,7 @@ def show(request, id):
 		return redirect("/")
 	return render(request, "showpost.html", locals())
 
-<<<<<<< HEAD
+#	<<<<<<< HEAD
 def listing(request):
 	target = Post.objects.all()
 
@@ -50,5 +50,5 @@ def listing(request):
 	context = {'target' : page}
 
 	return render(request, 'list.html', context)	
-=======
->>>>>>> 2c6c20248e88aecd53c4077053a7463be25bec85
+#=======
+#>>>>>>> 2c6c20248e88aecd53c4077053a7463be25bec85
